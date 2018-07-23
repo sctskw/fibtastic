@@ -86,3 +86,13 @@ test('Fib.Iterator should calculate the sum of Evens', () => {
 
   expect(sum).toEqual(10)
 })
+
+test('Fib.Iterator should calculate the sum of custom filter', () => {
+  let sum = new Fib.Iterator(0, 1, 10)
+    .filter((value, idx) => {
+      return value === 1
+    })
+    .sum()
+
+  expect(sum).toEqual(2)
+})
