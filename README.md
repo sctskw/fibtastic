@@ -8,12 +8,16 @@ sequence
 
 - Node >= 8.11
 
+--
+
 Install
 =======
 
 ```
 npm install --save sctskw/fibtastic
 ```
+
+--
 
 Include
 ========
@@ -30,7 +34,6 @@ for (let value of iter) {
 //1,1,2,3,5,8,13,21,34,55,89
 
 ```
-
 
 --
 
@@ -54,7 +57,7 @@ __Find the sum of the even-valued terms whos value does not exceed four million_
 ```
   const Fib = require('fibtastic')
 
-  let sum = Fib.Iterator(1, 2, 4000000, Fib.Filters.Evens).sum()
+  let sum = new Fib.Iterator(1, 2, 4000000, Fib.Filters.Evens).sum()
 
   console.log(sum) //outputs 4613732
 
@@ -65,7 +68,7 @@ __Find the sum of the odd-valued terms whos value does not exceed four million__
 ```
   const Fib = require('fibtastic')
 
-  let sum = Fib.Iterator(1, 2, 4000000, Fib.Filters.Odds).sum()
+  let sum = new Fib.Iterator(1, 2, 4000000, Fib.Filters.Odds).sum()
 
   console.log(sum) //outputs 4613730
 
@@ -76,7 +79,7 @@ __Find the sum of every value which does not exceed four million__
 ```
   const Fib = require('fibtastic')
 
-  let sum = Fib.Iterator(0, 1, 4000000).sum()
+  let sum = new Fib.Iterator(0, 1, 4000000).sum()
 
   console.log(sum) //outputs 9227464
 
@@ -92,11 +95,12 @@ __Find the sum of every other value which does not exceed four million__
     return idx % 2 > 0
   }
 
-  let sum = Fib.Iterator(0, 1, 4000000).filter(customFilter).sum()
+  let sum = new Fib.Iterator(0, 1, 4000000).filter(customFilter).sum()
 
   console.log(sum) //outputs 3524577
 
 ```
+
 --
 
 
