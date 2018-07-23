@@ -1,29 +1,11 @@
-function fib(last, curr) {
-
-  let max = 4000000
-  let value = 0
-  let temp = 0
-
-  console.log(last)
-  console.log(curr)
+(function fib (last, curr, max) {
+  let temp
 
   while (curr <= max) {
-
-    if ( !(curr % 2) ) {
-      value = value + curr
-      console.log('=>', value)
-    }
+    console.log(curr)
 
     temp = parseInt(last)
     last = curr
     curr = curr + temp
-
-    console.log(curr)
-
   }
-
-  return value
-
-}
-
-console.log('===', fib(1, 2))
+})(0, 1, 4000000)

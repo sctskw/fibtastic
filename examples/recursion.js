@@ -1,6 +1,7 @@
-function fib (a, b, n) {
-  if (!n) return a
-  return fib(b, a+b, n-1)
+function fib (fn1, fn2, max) {
+  if (fn2 >= max) return false
+  console.log(fn2)
+  return fib(fn2, fn1 + fn2, max)
 }
 
-console.log(fib(0,1,50))
+fib(0, 1, 4000000)
