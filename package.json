@@ -1,0 +1,25 @@
+{
+  "name": "fibtastic",
+  "version": "0.0.1",
+  "description": "program library for fibonacci sequence",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "euler",
+    "projecteuler",
+    "fibonacci"
+  ],
+  "author": "Scott Skow",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^23.4.1"
+  }
+}
