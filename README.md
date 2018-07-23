@@ -4,7 +4,20 @@ fibtastic
 A modular library with various utilities available to traverse the fibonacci
 sequence
 
-**Requires: Node >= 8.11**
+*Requires*
+
+- Node >= 8.11
+
+--
+
+Why?
+===
+
+Functional Programming (FP) is extremely useful when dealing with Array traversal and data manipulation. This library was inspired by FP utilities for the primitive Array object. By wrapping Fibonacci in an easy and extensible library using a similar approach to current FP adopted standards in modern day Javascript, we're able to create a nice and intuitive interface to be included in other modules.
+
+Futhermore, it's just fun!
+
+--
 
 Examples:
 ========
@@ -52,14 +65,16 @@ __Find the sum of every other value which does not exceed four million__
     return idx % 2 > 0
   }
 
-  let sum = Fib.Iterator(0, 1, 4000000, customFilter).sum()
+  let sum = Fib.Iterator(0, 1, 4000000).filter(customFilter).sum()
 
   console.log(sum) //outputs 3524577
 
 ```
+--
 
-Running Tests:
-==============
+
+Running Tests
+=============
 
 *single run of full test suite*
 
@@ -78,8 +93,9 @@ npm run test:watch
 ```
 npm run test:debug
 ```
+--
 
-Future Work:
+Future Work/Support
 ============
 - Support ES6 import/export
-
+- Input Validation on whether values are in fact true Fibonacci values
